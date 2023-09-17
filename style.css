@@ -1,8 +1,9 @@
 .topbar{
     text-align: center;
-    border-color: rebeccapurple;
-    border-style: double;
+    border-color: darkmagenta;
+    border-style: groove;
     border-bottom-style: groove;
-    border-top-left-radius: 75%;
-    border-top-right-radius: 75%;
+    border-radius: 0px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
