@@ -1,0 +1,1 @@
+document.getElementById("Answer").innerHTML = document.getElementById("Answer").innerHTML
