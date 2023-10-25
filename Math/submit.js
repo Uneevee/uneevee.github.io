@@ -1,1 +1,1 @@
-document.getElementById("Answer").innerHTML = document.getElementById("Answer").innerHTML
+document.getElementById("response").innerHTML = document.getElementById("Answer").innerHTML
