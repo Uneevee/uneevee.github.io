@@ -15,8 +15,7 @@
     Not sure if it'll be programmed in JS or php, both seem really fun and I want to work on both
     anyways 2+2 test below
   </p>
-  <label for="button">submit</label>
-  <input type="number" id="Answer">
-  <button type="button" id="submit" onclick="submit.js"></button>
+  <label for="button"></label>
+  <button type="button" id="submit" onclick='document.getElementById("response").innerHTML = document.getElementById("Answer").innerHTML'>submit</button>
   <p id="response"></p>
 </body>
