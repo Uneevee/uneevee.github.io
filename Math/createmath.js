@@ -8,7 +8,7 @@ document.body.insertBefore(input, null)
 newquestion()
 
 function submit(){
-    document.getElementById("response").innerHTML = parseInt(document.getElementById("answer").innerHTML, 10) == num1 + num2
+    document.getElementById("response").innerHTML = parseInt(document.getElementById("answer").value, 10) == num1 + num2
     newquestion()
 }
 function newquestion(){
