@@ -3,7 +3,7 @@ var num1 = Math.floor(Math.random()*10)
 var num2 = Math.floor(Math.random()*10)
 var answer
 var mode = 0
-var modes = [addition]
+var modes = [addition, subtraction]
 input.setAttribute("id", "answer")
 input.setAttribute("number", "text")
 input.setAttribute("aria-label", "answer")
@@ -15,7 +15,8 @@ function submit(){
     newquestion()
 }
 function newquestion(){
-    modes[mode]()
+    mode = document.getElementById("mode").value;
+    modes[mode]();
 }
 function addition(){
     num1 = Math.floor(Math.random()*10)
