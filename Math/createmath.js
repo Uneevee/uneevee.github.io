@@ -16,6 +16,7 @@ function submit(){
 }
 function newquestion(){
     mode = document.getElementById("mode").value;
+    console.log(mode)
     modes[mode]();
 }
 function addition(){
