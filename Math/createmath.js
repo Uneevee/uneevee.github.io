@@ -11,12 +11,11 @@ document.body.insertBefore(input, null)
 newquestion()
 // Gotta make a quick comment to get the js to actually deploy
 function submit(){
-    document.getElementById("response").innerHTML = parseInt(document.getElementById("answer").value, 10) == answer
+    document.getElementById("response").innerHTML = parseFloat(document.getElementById("answer").value, 10) == answer
     newquestion()
 }
 function newquestion(){
     mode = document.getElementById("mode").value;
-    console.log(mode)
     modes[mode]();
 }
 function addition(){
