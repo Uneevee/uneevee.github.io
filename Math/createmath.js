@@ -9,7 +9,7 @@ input.setAttribute("number", "text")
 input.setAttribute("aria-label", "answer")
 document.body.insertBefore(input, null)
 newquestion()
-
+// Gotta make a quick comment to get the js to actually deploy
 function submit(){
     document.getElementById("response").innerHTML = parseInt(document.getElementById("answer").value, 10) == answer
     newquestion()
