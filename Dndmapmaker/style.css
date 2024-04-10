@@ -21,10 +21,10 @@ body{
     margin-right: 50px;
 }
 .draggable{
-    position: absolute;
+    border: 2px black;
+    border-radius: 10%;
 }
 .test{
-    position: absolute;
     border: 2px black;
     border-radius: 10%;
 }
