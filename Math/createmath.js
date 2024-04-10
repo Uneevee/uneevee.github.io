@@ -12,7 +12,7 @@ document.body.insertBefore(input, null)
 newquestion()
 
 function submit(){
-    document.getElementById("response").innerHTML = parseFloat(document.getElementById("answer").value, 10) == answer
+    document.getElementById("response").innerHTML = parseInt(document.getElementById("answer").value) == answer
     newquestion()
 }
 function newquestion(){
@@ -34,14 +34,14 @@ function subtraction(){
 function multiplication(){
     num1 = Math.floor(Math.random()*10)
     num2 = Math.floor(Math.random()*10)
-    answer = num1 * num2
+    answer = [num1 * num2, "", ""]
     document.getElementById("question").innerHTML = num1 + "*" + num2
 }
 function division(){
     //TODO: get whole num + fraction answer
     num1 = Math.floor(Math.random()*10)
     num2 = Math.floor(Math.random()*10)
-    answer = num1 / num2
+    answer = [Math.floor(num1 / num2), num1/num2 - Math.floor(num1 / num2)*num2, num2]
     document.getElementById("question").innerHTML = num1 + "/" + num2
 }
 function exponets(){
