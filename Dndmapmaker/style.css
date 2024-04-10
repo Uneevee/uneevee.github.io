@@ -20,3 +20,11 @@ body{
     margin-left: 50px;
     margin-right: 50px;
 }
+.draggable{
+    border: 2px black;
+    border-radius: 10%;
+}
+.test{
+    border: 2px black;
+    border-radius: 10%;
+}
