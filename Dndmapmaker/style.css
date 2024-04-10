@@ -25,3 +25,9 @@ body{
     transform: rotate(0deg)
 
 }
+.test{
+    position: absolute;
+    transform: rotate(0deg);
+    border: 2px black;
+    border-radius: 10%;
+}
