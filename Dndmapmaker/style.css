@@ -23,6 +23,12 @@ body{
 .draggable{
     border: 2px black;
     border-radius: 10%;
+    object-fit: scale-down;
+    height: 100%;
+    width: inherit;
+}
+#the{
+    background-image: url(./R.jpg)
     
 }
 .test{
