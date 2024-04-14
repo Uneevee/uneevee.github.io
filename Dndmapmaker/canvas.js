@@ -1,12 +1,13 @@
 var subject = document.getElementById("placehold");
-var mousemove = (evnt)=>{subject.style.left = evnt.pageX +"px";
+var mousemove = ()=>{subject.style.left = evnt.pageX +"px";
     subject.style.top = evnt.pageY + "px";
-    subject.style.transform = "0deg";
+    subject.style.rotate = "99deg";
     subject.style.position = "absolute";
-    subject.style.border = "0px";
+    subject.style.transform
 }
 function newelement(name){
     subject = document.getElementById(name);
 }
 document.addEventListener("mousemove", mousemove);
-document.addEventListener("mouseup", (evnt)=>{subject=document.getElementById("placehold");});
+document.addEventListener("mouseup", ()=>{subject=document.getElementById("placehold");});
+document.addEventListener("wheel", ()=>{});
