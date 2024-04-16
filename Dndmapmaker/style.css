@@ -27,13 +27,9 @@ body{
 .draggable{
     object-fit: contain;
     height: 20%;
-    width: auto;
+    width: 20%;
     -webkit-user-drag: none;
 }
 #the{
     background-image: url(./R.jpg)
-}
-.test{
-    border: 2px black;
-    border-radius: 10%;
 }
