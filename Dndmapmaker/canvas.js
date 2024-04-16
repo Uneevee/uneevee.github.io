@@ -16,8 +16,11 @@ function newelement(name){
 var mousedown = (evnt)=>{subject.style.left = subject.offsetLeft + "px"
     subject.style.top = subject.offsetTop + "px"
 }
+var mouseup = ()=>{
+    subject=document.getElementById("placehold");
+}
 //TODO: MAKE RESIZE AND ROTATE BOX
 document.addEventListener("mousemove", mousemove);
-document.addEventListener("mouseup", ()=>{subject=document.getElementById("placehold");});
+document.addEventListener("mouseup", mouseup);
 document.addEventListener("mousedown", mousedown)
 //document.addEventListener("wheel", ()=>{});
