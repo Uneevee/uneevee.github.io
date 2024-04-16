@@ -17,6 +17,12 @@ var mousedown = (evnt)=>{subject.style.left = subject.offsetLeft + "px"
     subject.style.top = subject.offsetTop + "px"
 }
 var mouseup = ()=>{
+    console.log(window.innerWidth/5*4)
+    console.log(subject.style.left)
+    console.log(parseInt(subject.style.left)> window.innerWidth/5*4)
+    if(parseInt(subject.style.left)> window.innerWidth/5*4 && subject.id != "placehold"){
+        subject.remove()
+    }
     subject=document.getElementById("placehold");
 }
 //TODO: MAKE RESIZE AND ROTATE BOX
