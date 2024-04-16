@@ -28,9 +28,6 @@ body{
     object-fit: fill;
     height: 20%;
     width: 20%;
-    -webkit-user-drag: none;
-    resize: both;
-    overflow: auto;
 }
 #the{
     background-image: url(./R.jpg)
