@@ -25,15 +25,13 @@ body{
     margin-right: 50px;
 }
 .draggable{
-    object-fit: contain;
+    object-fit: fill;
     height: 20%;
-    width: auto;
+    width: 20%;
     -webkit-user-drag: none;
+    resize: both;
+    overflow: auto;
 }
 #the{
     background-image: url(./R.jpg)
-}
-.test{
-    border: 2px black;
-    border-radius: 10%;
 }
