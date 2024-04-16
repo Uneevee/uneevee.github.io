@@ -25,10 +25,17 @@ body{
     margin-right: 50px;
 }
 .draggable{
-    object-fit: fill;
-    height: 20%;
-    width: 20%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-user-drag: none;
 }
 #the{
     background-image: url(./R.jpg)
+}
+div.menu{
+    float: right
+}
+
+div.toolbox{
+    grid-template-areas: ;
 }

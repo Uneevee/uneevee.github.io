@@ -1,10 +1,9 @@
 var subject = document.getElementById("placehold");
-subject.style.left = 0;
-var pos = [0, 0];
+subject.style.left = 0
+var pos = [0, 0]
 
-var mousemove = (evnt)=>{
-    subject.style.left = (parseInt(subject.style.left) + (evnt.pageX - pos[0])) +"px";
-    pos[0] = evnt.pageX;
+var mousemove = (evnt)=>{subject.style.left = (parseInt(subject.style.left) + (evnt.pageX - pos[0])) +"px";
+    pos[0] = evnt.pageX
     subject.style.top = (parseInt(subject.style.top) + (evnt.pageY - pos[1])) +"px";
     pos[1] = evnt.pageY;
     subject.style.rotate = "99deg";
@@ -14,17 +13,14 @@ var mousemove = (evnt)=>{
 function newelement(name){
     subject = document.getElementById(name);
 }
-var mousedown = (evnt)=>{
-    subject.style.left = subject.offsetLeft + "px";
-    subject.style.top = subject.offsetTop + "px";
-
+var mousedown = (evnt)=>{subject.style.left = subject.offsetLeft + "px"
+    subject.style.top = subject.offsetTop + "px"
 }
-var mouseup = (evnt)=>{
+var mouseup = ()=>{
     subject=document.getElementById("placehold");
-    resizing = false;
 }
-//TODO: MAKE RESIZE AND ROTATE BOX ITSELF
+//TODO: MAKE RESIZE AND ROTATE BOX
 document.addEventListener("mousemove", mousemove);
 document.addEventListener("mouseup", mouseup);
-document.addEventListener("mousedown", mousedown);
+document.addEventListener("mousedown", mousedown)
 //document.addEventListener("wheel", ()=>{});
