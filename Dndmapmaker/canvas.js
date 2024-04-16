@@ -13,13 +13,13 @@ var mousemove = (evnt)=>{subject.style.left = (parseInt(subject.style.left) + (e
 function newelement(name){
     subject = document.getElementById(name);
 }
+function spawnnew(element){
+    
+}
 var mousedown = (evnt)=>{subject.style.left = subject.offsetLeft + "px"
     subject.style.top = subject.offsetTop + "px"
 }
 var mouseup = ()=>{
-    console.log(window.innerWidth/5*4)
-    console.log(subject.style.left)
-    console.log(parseInt(subject.style.left)> window.innerWidth/5*4)
     if(parseInt(subject.style.left)> window.innerWidth/5*4 && subject.id != "placehold"){
         subject.remove()
     }
