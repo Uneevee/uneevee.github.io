@@ -33,9 +33,6 @@ body{
     background-repeat: no-repeat;
     -webkit-user-drag: none;
 }
-#the{
-    background-image: url(./R.jpg)
-}
 div.menu{
     float: right;
     display: grid;
@@ -74,8 +71,4 @@ div.image{
     background-position: center;
     background-repeat: no-repeat;
     -webkit-user-drag: none;
-}
-
-div.object > #box{
-    background-image: url(./box.jpg);
 }

@@ -7,13 +7,18 @@
   <title>Dnd map maker</title>
 </head>
 <body>
-<div id="placehold" draggable="false" style="height: 0px; width:0px;"></div>
-<div class="draggable" draggable="false" onmousedown="newelement('testtext')" id="testtext" style="height: 5%; width: 5%; position:absolute;">testtext</div>
-<div class ="draggable" draggable="false" src="./R.jpg" id="the", onmousedown="newelement('the')" style="height: 5%; width: 5%; position:absolute;"></div>
+<div id="placehold" draggable="false"
+style="height: 0px; width:0px;"></div>
+<div class="draggable" draggable="false" onmousedown="newelement('testtext')" id="testtext"
+style="height: 5%; width: 5%; position:absolute;">testtext</div>
+<div class ="draggable" draggable="false" id="the" onmousedown="newelement('the')"
+style="height: 5%; width: 5%; position:absolute; background-image: url(./R.jpg);"></div>
 <div id="side" class="menu">
   <div class="toolbox" id=""toolbox>
     <div class="object">
-      <div class="image" id="box"></div>
+      <div class="image" id="box"
+      style="background-image: url(./box.jpg);"
+      onmousedown='spawnnew("url(./box.jpg)", "box")'></div>
       <p>box</p>
     </div>
     <div class="object">
@@ -25,15 +30,15 @@
       <p>box</p>
     </div>
     <div class="object">
-      <div class="image" id="1"></div>
+      <div class="image" id="pink"></div>
       <p>box</p>
     </div>
     <div class="object">
-      <div class="image" id="2"></div>
+      <div class="image" id="apple"></div>
       <p>box</p>
     </div>
     <div class="object">
-      <div class="image" id="3"></div>
+      <div class="image" id="ratatat"></div>
       <p>box</p>
     </div>
   </div>
