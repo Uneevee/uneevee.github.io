@@ -14,7 +14,6 @@ var mousemove = (evnt)=>{subject.style.left = (parseInt(subject.style.left) + (e
 }
 function newelement(name){
     subject = document.getElementById(name);
-    subject.style.min
 }
 function spawnnew(image, element){
     const currentnum= elementcount.toString();
@@ -24,7 +23,6 @@ function spawnnew(image, element){
     newele.style.position = "absolute";
     newele.className = "draggable";
     newele.style.backgroundImage = image;
-    console.log(boundrect.width + "px", boundrect.height + "px")
     newele.style.minWidth = boundrect.width + "px";
     newele.style.minHeight = boundrect.height + "px";
     newele.style.left = boundrect.left + "px";
@@ -41,12 +39,28 @@ var mousedown = (evnt)=>{subject.style.left = subject.offsetLeft + "px";
 }
 var mouseup = ()=>{
     if(parseInt(subject.style.left)> window.innerWidth/5*4 && subject.id != "placehold"){
+        props.splice(props.indexOf(subject), 1);
         subject.remove();
     }
     subject=document.getElementById("placehold");
 }
+var unload = ()=>{let i = 0;
+    let totality = [];
+    while(i < props.length){
+        totality = totality.concat([props[i].style.backgroundImage, 
+            [props[i].style.left, props[i].style.top], 
+            [props[i].style.minWidth, props[i].style.minHeight]])
+        i++
+    }
+    let d = new Date(Date.now());
+    d.setTime(d.getTime() + (400*24*3600*1000));
+    console.log(totality.toString(), d.toUTCString());
+    document.cookie = "everything=" + totality.toString() + "; expires=" + d.toUTCString() +";" + "path= ./";
+    console.log(document.cookie);
+}
 //TODO: MAKE RESIZE AND ROTATE BOX
 document.addEventListener("mousemove", mousemove);
 document.addEventListener("mouseup", mouseup);
-document.addEventListener("mousedown", mousedown)
+document.addEventListener("mousedown", mousedown);
+document.addEventListener("beforeunload", unload);
 //document.addEventListener("wheel", ()=>{});
