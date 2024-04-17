@@ -29,7 +29,7 @@ body{
     margin-right: 50px;
 }
 .draggable{
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     -webkit-user-drag: none;
 }
