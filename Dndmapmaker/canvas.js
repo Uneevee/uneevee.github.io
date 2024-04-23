@@ -12,7 +12,6 @@ var mousemove = (evnt)=>{subject.style.left = (parseInt(subject.style.left) + (e
     pos[1] = evnt.pageY;
     subject.style.rotate = "0deg";
     subject.style.position = "absolute";
-    //subject.style.transform
 }
 function newelement(name){
     console.log(name)
@@ -99,9 +98,7 @@ function load(){
     }
     subject = document.getElementById("placehold");
 }
-//TODO: MAKE RESIZE AND ROTATE BOX
 document.addEventListener("mousemove", mousemove);
 document.addEventListener("mouseup", (evnt)=>{mouseup(evnt)});
 document.addEventListener("mousedown", mousedown);
 document.addEventListener("beforeunload", unload);
-//document.addEventListener("wheel", ()=>{});
