@@ -59,7 +59,7 @@ var unload = ()=>{let i = 0;
     d.setTime(d.getTime() + (400*24*3600*1000));
     console.log(totality.toString(), d.toUTCString());
     save = "everything=" + totality.toString() + "; expires=" + d.toUTCString() +";" + "path= ./";
-    document.cookie = "everything=" + totality.toString() + "; expires=" + d.toUTCString() +";" + "path= ./";
+    document.cookie = "everything=" + totality.toString() + "; expires=" + d.toUTCString() +";" + "path= ./; SameSite=Strict";
 }
 function load(){
     if(document.cookie == ""){
