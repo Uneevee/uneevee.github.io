@@ -58,15 +58,19 @@ var unload = ()=>{let i = 0;
     let d = new Date(Date.now());
     d.setTime(d.getTime() + (400*24*3600*1000));
     console.log(totality.toString(), d.toUTCString());
-    document.cookie = "everything=" + totality.toString() + "; expires=" + d.toUTCString() +";" + "path= ./";
     save = "everything=" + totality.toString() + "; expires=" + d.toUTCString() +";" + "path= ./";
+    document.cookie = "everything=" + totality.toString() + "; expires=" + d.toUTCString() +";" + "path= ./";
 }
 function load(){
-    let a = save.split(";")[0].split("=")[1].split(",");
+    if(document.cookie == ""){
+    var a = save.split(";")[0].split("=")[1].split(",");
+    } else {
+    var a= document.cookie.split(";")[0].split("=")[1].split(",");
+    }
     document.getElementById("board").remove();
     let x =document.createElement("div");
     x.id="board";
-    document.body.insertBefore(x, document.getElementById("side"));
+    document.body.insertBefore(x, document.getElementById("trueside"));
     base = document.getElementById("board")
     newplacehold = document.createElement("div")
     newplacehold.id = "placehold";
@@ -98,6 +102,7 @@ function load(){
         delete currentnum;
     }
     subject = document.getElementById("placehold");
+    delete a;
 }
 //TODO: MAKE RESIZE AND ROTATE BOX
 document.addEventListener("mousemove", mousemove);
